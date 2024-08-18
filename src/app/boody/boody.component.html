@@ -1,0 +1,23 @@
+<input type="text" [(ngModel)]="UserName">
+<p >{{UserName}}</p>
+<button class="btn btn-primary" [disabled]="!Dissplay()" (click)="OnButtonClicked()" >run</button>
+
+<br>
+
+<button class="btn btn-primary" (click)="OnlogClick()">Display Details</button>
+<p *ngIf="showDetails">Secret Password = tuna</p>
+
+  @if (clickCount>4) 
+  {
+    <div *ngFor="let l of log" [ngStyle]="LogStyle" [ngClass]="logclass">
+    {{ l }}
+    </div>
+  }
+  @else 
+  {
+    <div *ngFor="let l of log">
+        {{ l }}
+        </div>
+  }
+
+
